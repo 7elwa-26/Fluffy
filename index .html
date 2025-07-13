@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Puzzle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      text-align: center;
+      background-color: #f0f8ff;
+    }
+    input {
+      padding: 10px;
+      font-size: 18px;
+      width: 100px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 20px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Solve it 👀</h1>
+  <p>If 2A + B = 49<br>and A + B = 28<br>Then A = .........</p>
+
+  <input type="number" id="answer" placeholder="Your answer" />
+  <button onclick="checkAnswer()">Submit</button>
+
+  <div class="message" id="message"></div>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answer").value;
+      const messageDiv = document.getElementById("message");
+
+      if (parseInt(input) === 21) {
+        window.location.href = "success.html";
+      } else {
+        messageDiv.textContent = "Try again 🫎";
+      }
+    }
+  </script>
+</body>
+</html>
